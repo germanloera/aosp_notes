@@ -6,7 +6,7 @@ A comprehensive, step-by-step guide to setting up a Debian build environment, do
 
 ### 1.1 Minimum Hardware Requirements
 
-* **OS:** Debian 11 (Bullseye) or Debian 12 (Bookworm), 64-bit.
+* **OS:** Tested on Debian 13 (Trixie), 64-bit.
 * **Storage:** At least 400 GB of free disk space (NVMe SSD strongly recommended; checking out a single branch requires ~250 GB, while building requires another 150 GB+).
 * **RAM:** Minimum 32 GB (64 GB or more recommended to prevent Out-Of-Memory errors during compilation and linking).
 * **Swap:** If you have 32 GB of RAM or less, configure at least 16–32 GB of swap space.
@@ -143,7 +143,7 @@ source build/envsetup.sh
 * `croot`: Changes working directory to the root of the AOSP tree.
 * `godir <file>`: Quickly jumps to any directory containing a specific file.
 
-### 4.2 Configuring CCache (Recommended)
+### 4.2 Configuring CCache (Optional but recommended)
 
 To accelerate repeated builds, enable CCache:
 
@@ -168,7 +168,9 @@ ccache -M 50G
 
 Modern AOSP (Android 14+ trunk-based development) uses a three-part combo format:
 
+$$
 $$\text{TARGET} = \langle\text{product}\rangle-\langle\text{release\_config}\rangle-\langle\text{build\_variant}\rangle$$
+$$
 
 Instead of guessing target names or scrolling through hundreds of entries in an interactive menu, `envsetup.sh` provides dedicated discovery commands.
 
