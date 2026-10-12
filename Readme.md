@@ -2,7 +2,7 @@
 
 A comprehensive, step-by-step guide to setting up a Debian build environment, downloading the source code via the `repo` tool, configuring environment variables, and building Android Open Source Project (AOSP) images.
 
-Para consultar la versión en espanol, revisa la [Guía de AOSP en inglés](readme_es.md).
+Para consultar la versión en espanol, revisa la [Guía de AOSP](readme_es.md).
 
 ## 1. System Requirements & Debian Package Setup
 
