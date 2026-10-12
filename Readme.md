@@ -97,16 +97,15 @@ cd ~/aosp
 The `repo init` command initializes a `.repo` directory containing the manifest files and repository configurations.
 
 ```bash
-repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r50 --depth=1
+repo init --partial-clone --no-use-superproject -b android-latest-release -u https://android.googlesource.com/platform/manifest
 ```
 
 #### Command & Parameters:
 
 * `-u <url>`: Target manifest repository URL (`https://android.googlesource.com/platform/manifest`).
-* `-b <branch/tag>`: Specifies the exact release branch or tag to track (e.g., `android-14.0.0_r50` or `main`).
-* `--depth=1`: **Shallow clone**. Fetches only the latest commit for each project rather than the full Git history.
-  * *Why use it:* Reduces initial download size by more than 100 GB and saves hours of download time.
-  * *Trade-off:* You will not have full Git history locally.
+* `-b <branch/tag>`: Specifies the exact release branch or tag to track (e.g., `android-14.0.0_r50` or `android-latest-release`).
+* `--partial-clone`: Drastically reduces download time and disk space usage by skipping heavy binary files you do not need immediately.
+* `--no-use-superproject`: Forces repo to sync projects by parsing the traditional manifest XML file instead of using Google's centralized superproject.
 
 ### 3.2 Syncing the Source Code (`repo sync`)
 

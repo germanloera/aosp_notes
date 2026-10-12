@@ -97,15 +97,14 @@ cd ~/aosp
 El comando `repo init` crea un directorio `.repo` que contiene los metadatos y el manifiesto de la versión deseada:
 
 ```bash
-repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r50 --depth=1
+repo init --partial-clone --no-use-superproject -b android-latest-release -u https://android.googlesource.com/platform/manifest
 ```
 
 #### Parámetros del comando:
 * `-u <url>`: URL del repositorio del manifiesto (`https://android.googlesource.com/platform/manifest`).
-* `-b <rama/etiqueta>`: Especifica la rama o etiqueta de lanzamiento a rastrear (por ejemplo, `android-14.0.0_r50` o `main`).
-* `--depth=1`: **Clonado superficial (shallow clone)**. Descarga únicamente el último commit de cada submódulo en lugar de todo el historial histórico de Git.
-  * *Ventaja:* Ahorra más de 100 GB de descarga y reduce drásticamente el tiempo inicial.
-  * *Consideración:* No contarás con el historial completo de commits localmente.
+* `-b <rama/etiqueta>`: Especifica la rama o etiqueta de lanzamiento a rastrear (por ejemplo, `android-14.0.0_r50` o `android-latest-release`).
+* `--partial-clone`: Reduce drásticamente el tiempo de descarga y el espacio ocupado en disco al omitir archivos binarios pesados que no necesitas de inmedia
+* `--no-use-superproject`: Obliga a repo a sincronizar los proyectos analizando el archivo XML tradicional de manifiestos, en vez de usar el superproyecto centralizado de Google.
 
 ---
 
