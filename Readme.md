@@ -24,7 +24,7 @@ sudo apt update && sudo apt upgrade -y
 ```bash
 sudo apt install -y \
     git-core gnupg flex bison build-essential zip curl zlib1g-dev \
-    libc6-dev-i386 libncurses5 libncurses5-dev x11proto-core-dev \
+    libc6-dev-i386 libncurses5-dev x11proto-core-dev \
     libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc \
     unzip fontconfig python3 python3-pip python-is-python3 \
     rsync ccache libssl-dev bc
