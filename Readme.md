@@ -112,15 +112,13 @@ repo init --partial-clone --no-use-superproject -b android-latest-release -u htt
 Fetch all repositories specified in the manifest:
 
 ```bash
-repo sync -c -j$(nproc) --no-clone-bundle --no-tags
+repo sync -c -j$(nproc) 
 ```
 
 #### Command & Parameters:
 
 * `-c` (`--current-branch`): Fetch only the specified branch (saves bandwidth and disk space).
 * `-j$(nproc)`: Sets parallel download jobs matching the number of CPU cores available on your system.
-* `--no-clone-bundle`: Bypasses CDN bundles and downloads directly from the Git servers (useful if download bundles fail or time out).
-* `--no-tags`: Avoids downloading Git tags unless specifically needed.
 
 ---
 

@@ -113,14 +113,12 @@ repo init --partial-clone --no-use-superproject -b android-latest-release -u htt
 Descarga todos los repositorios declarados en el manifiesto:
 
 ```bash
-repo sync -c -j$(nproc) --no-clone-bundle --no-tags
+repo sync -c -j$(nproc) 
 ```
 
 #### Parámetros del comando:
 * `-c` (`--current-branch`): Descarga únicamente la rama especificada en el manifiesto, omitiendo el resto.
 * `-j$(nproc)`: Define el número de descargas en paralelo igual a la cantidad de núcleos de CPU detectados.
-* `--no-clone-bundle`: Descarga directamente desde los servidores Git en lugar de utilizar paquetes CDN preempaquetados (útil si los bundles fallan o sufren timeout).
-* `--no-tags`: Evita descargar etiquetas de Git innecesarias.
 
 ---
 
