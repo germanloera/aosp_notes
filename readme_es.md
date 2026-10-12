@@ -7,7 +7,7 @@ Una guía completa paso a paso para preparar un entorno de compilación en Debia
 ## 1. Requisitos del Sistema e Instalación de Paquetes en Debian
 
 ### 1.1 Requisitos Mínimos de Hardware
-* **Sistema Operativo:** Debian 11 (Bullseye) o Debian 12 (Bookworm), arquitectura de 64 bits.
+* **Sistema Operativo:** Probado en Debian 13 (Trixie) de 64 bits.
 * **Almacenamiento:** Mínimo 400 GB de espacio libre en disco (se recomienda encarecidamente SSD NVMe; clonar una rama requiere aprox. 250 GB y la compilación genera más de 150 GB de artefactos).
 * **Memoria RAM:** Mínimo 32 GB (se recomiendan 64 GB o más para evitar fallos por falta de memoria [OOM] durante el enlazado binario).
 * **Swap (Espacio de Intercambio):** Si dispones de 32 GB de RAM o menos, configura al menos 16–32 GB adicionales de swap.
@@ -171,9 +171,8 @@ ccache -M 50G
 
 En versiones modernas de AOSP (a partir de Android 14 con desarrollo basado en tronco o *trunk-based development*), un objetivo se define mediante la combinación:
 
-$$
-\text{OBJETIVO} = \langle\text{producto}\rangle-\langle\text{configuración\_de\_release}\rangle-\langle\text{variante\_de\_compilación}\rangle
-$$
+$$\text{TARGET} = \langle\text{product}\rangle-\langle\text{release\\_config}\rangle-\langle\text{build\\_variant}\rangle$$
+
 
 Para evitar conjeturas o listas interactivas lentas, `envsetup.sh` incluye comandos especializados de consulta.
 
