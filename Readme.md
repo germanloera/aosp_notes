@@ -168,8 +168,6 @@ ccache -M 50G
 
 Modern AOSP (Android 14+ trunk-based development) uses a three-part combo format:
 
-$$\text{TARGET} = \langle\text{product}\rangle-\langle\text{release\_config}\rangle-\langle\text{build\_variant}\rangle$$
-
 $$\text{TARGET} = \langle\text{product}\rangle-\langle\text{release\\_config}\rangle-\langle\text{build\\_variant}\rangle$$
 
 
