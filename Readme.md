@@ -168,9 +168,7 @@ ccache -M 50G
 
 Modern AOSP (Android 14+ trunk-based development) uses a three-part combo format:
 
-$$
 $$\text{TARGET} = \langle\text{product}\rangle-\langle\text{release\_config}\rangle-\langle\text{build\_variant}\rangle$$
-$$
 
 Instead of guessing target names or scrolling through hundreds of entries in an interactive menu, `envsetup.sh` provides dedicated discovery commands.
 
