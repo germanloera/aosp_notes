@@ -241,7 +241,7 @@ export TARGET_BUILD_VARIANT='userdebug'
 También puedes pasar la combinación completa en un solo argumento:
 
 ```bash
-lunch sdk_phone64_x86_64-trunk_staging-userdebug
+lunch sdk_phone64_x86_64-aosp_current-eng
 ```
 
 *(En versiones anteriores a Android 14 sin trunk-based development, el formato era: `lunch aosp_x86_64-userdebug`)*
