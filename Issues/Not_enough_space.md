@@ -46,6 +46,8 @@ BOARD_EMULATOR_DYNAMIC_PARTITIONS_SIZE ?= $(shell expr 2000 \* 1048576 )
 Replace the number 1800 with a larger number and rerun the m command
 it takes less time to compile
 
+This fix adds a multiplier, so instead of calculating the file we increment by 200 only by changing the multiplier, this allows to do small increments to the partition to fit all its content more acurately
+
 ### Fixed file 
 
 ```make
